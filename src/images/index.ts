@@ -1,0 +1,13 @@
+export { default as Vector1 } from "./Vector-1.png";
+export { default as Vector2 } from "./Vector-2.png";
+export { default as Vector3 } from "./Vector-3.png";
+export { default as AppSample } from "./app-sample.png";
+export { default as DotDot } from "./dot-dot.png";
+export { default as DownloadAndroid } from "./download-android.png";
+export { default as DownloadApple } from "./download-apple.png";
+export { default as Flag } from "./flag.png";
+export { default as LogoSide } from "./logo-side.png";
+export { default as Logo } from "./logo.png";
+export { default as People } from "./people.png";
+export { default as Tape } from "./tape.png";
+export { default as WavyBackground } from "./wavy-background.png";

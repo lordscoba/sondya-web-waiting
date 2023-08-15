@@ -50,7 +50,7 @@ const CountDown = () => {
 
   return (
     <div
-      className="flex flex-col bg-no-repeat bg-cover bg-center gap-4 p-8 h-[70vh] md:h-[90vh]"
+      className="flex flex-col bg-no-repeat bg-cover bg-center gap-4 p-8 h-[80vh] md:h-[90vh]"
       style={{ backgroundImage: `url(${Tape})` }}
     >
       <div className=" flex items-center w-4/5 gap-2">

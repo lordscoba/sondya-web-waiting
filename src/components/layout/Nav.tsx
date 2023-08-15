@@ -55,8 +55,8 @@ const Nav = () => {
       </div>
       <div
         className={`${
-          isScrolled && "fixed py-6"
-        } flex flex-wrap justify-evenly items-center playfair-display bg-white w-full z-20`}
+          isScrolled ? "fixed py-6 bg-[#F8F9FA]" : "bg-white py-2"
+        } flex flex-wrap justify-evenly items-center playfair-display  w-full z-20`}
       >
         <img className="object-cover w-fit" src={LogoSide} alt="" />
         <div className="flex gap-2 md:gap-5">

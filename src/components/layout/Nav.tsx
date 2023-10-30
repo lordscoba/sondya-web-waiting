@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BsTruck } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import { MdLocationPin } from "react-icons/md";
+import { Link as Linker, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 import { LogoSide } from "../../images";
 
@@ -22,6 +23,8 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  let location = useLocation();
+  console.log(location.pathname);
   return (
     <div className="z-40 bg-white w-full flex flex-col flex-grow shadow-sm">
       <div
@@ -56,26 +59,42 @@ const Nav = () => {
       <div
         className={`${
           isScrolled ? "fixed py-6 bg-[#F8F9FA]" : "bg-white py-2"
-        } flex flex-wrap justify-evenly items-center playfair-display  w-full z-20`}
+        } flex flex-wrap justify-evenly items-center playfair-display  w-full z-20 gap-3`}
       >
-        <img className="object-cover w-fit" src={LogoSide} alt="" />
-        <div className="flex gap-2 md:gap-5">
-          <div className="hover:border-b-2 hover:text-lg">
-            <Link to="home" smooth={true} duration={500}>
-              Home
-            </Link>
+        <Linker to={"/"}>
+          <img className="object-cover w-fit" src={LogoSide} alt="" />
+        </Linker>
+        {location.pathname === "/" ? (
+          <div className="flex gap-2 md:gap-5">
+            <div className="hover:border-b-2 hover:text-lg">
+              <Link to="home" smooth={true} duration={500}>
+                Home
+              </Link>
+            </div>
+            <div className="hover:border-b-2 hover:text-lg">
+              <Link to="about" smooth={true} duration={1000}>
+                About
+              </Link>
+            </div>
+            <div className="hover:border-b-2 hover:text-lg">
+              <Link to="contact" smooth={true} duration={1000}>
+                Contact Us
+              </Link>
+            </div>
+            <div className="hover:border-b-2 hover:text-lg">
+              <Linker to={"/description"}>Description</Linker>
+            </div>
           </div>
-          <div className="hover:border-b-2 hover:text-lg">
-            <Link to="about" smooth={true} duration={1000}>
-              About
-            </Link>
+        ) : (
+          <div className="flex gap-2 md:gap-5">
+            <div className="hover:border-b-2 hover:text-lg">
+              <Linker to={"/"}>Home</Linker>
+            </div>
+            <div className="hover:border-b-2 hover:text-lg">
+              <Linker to={"/description"}>Description</Linker>
+            </div>
           </div>
-          <div className="hover:border-b-2 hover:text-lg">
-            <Link to="contact" smooth={true} duration={1000}>
-              Contact Us
-            </Link>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

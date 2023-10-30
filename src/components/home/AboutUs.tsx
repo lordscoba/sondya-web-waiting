@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { People } from "../../images";
 
 const AboutUs = () => {
@@ -13,14 +14,17 @@ const AboutUs = () => {
           Growing
         </div>
         <div className="text-[18px] font-[300]">
-          Lorem ipsum dolor sit amet consectetur. Nulla massa et id euismod at
-          fermentum ornare. Sed habitant odio odio interdum semper. Id nulla
-          amet facilisi imperdiet condimentum. Feugiat et eu in vestibulum vel
-          porttitor id tellus rhoncus. Morbi vel vitae habitant elit eu. Egestas
-          dui sed mauris mauris. Netus at orci mi ut arcu. Aliquam gravida diam
-          sa. Habitasse purus turpis tortor vitae sed est felis. Est tortor
-          adipiscing.
+          Sondya, is a global social networking and e-commerce platform designed
+          for buying and selling products. It connects users from around the
+          world, allowing them to discover buy and sell products and services
+          and also interact with each other.
         </div>
+        <Link
+          className="bg-[#EDB842] px-4 py-2 rounded-md w-fit"
+          to={"/description"}
+        >
+          See more
+        </Link>
       </div>
       <div className="basis-1/2 p-3">
         <img
